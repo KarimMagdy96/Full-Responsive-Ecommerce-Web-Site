@@ -1,0 +1,26 @@
+{
+  "name": "ecommerce-website-with-html-css-javascript---full-responsive-ecommerce",
+  "version": "1.0.0",
+  "description": "Ecommerce Website With HTML CSS JavaScript - Full Responsive Ecommerce",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Ecommerce",
+    "Website",
+    "With",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "-",
+    "Full",
+    "Responsive",
+    "Ecommerce"
+  ],
+  "author": "Karim",
+  "license": "ISC",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
