@@ -81,10 +81,14 @@ button.white {
   align-items: center;
   justify-content: center;
 }
+
 #navbar li {
   list-style: none;
   padding: 0 20px;
   position: relative;
+}
+#close{
+    font-size: 0px;
 }
 #navbar li a {
   text-decoration: none;
@@ -124,6 +128,10 @@ button.white {
   color: white;
   text-align: center;
   background-color: tomato;
+}
+.mobil {
+  display: none;
+  align-items: baseline;
 }
 /* header-end */
 /* #########################################################333########################## */
@@ -494,7 +502,7 @@ footer .follow i {
   font-size: 20px;
 }
 footer .follow i:hover,
-footer a:hover{
+footer a:hover {
   color: #088178;
 }
 footer .install .row img {
@@ -504,8 +512,54 @@ footer .install .row img {
 footer .install img {
   margin: 10px 0 15px 0;
 }
-footer .copy-right{
-    width: 100%;
-    text-align: center;
+footer .copy-right {
+  width: 100%;
+  text-align: center;
 }
 /* footer-end */
+
+/* media query */
+@media (max-width: 799px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 120vh;
+    width: 300px;
+
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.01);
+    padding: 80px 0 0 10px;
+    z-index: 1;
+    transition: 0.3s;
+  }
+  #navbar.active {
+    right: 0px;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  .mobil {
+    display: flex;
+    align-items: baseline;
+    font-size: 24px;
+    column-gap: 20px;
+    z-index: 0;
+  }
+  #close {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+  }
+  .sm-cart{
+    display: none;
+  }
+}
+
+/* media query-end */
