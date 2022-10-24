@@ -12,7 +12,7 @@ const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".mycart-content");
 const productsDom = document.querySelector(".pro-container");
 const nproductsDom = document.querySelector(".npro-container");
-const butn = document.querySelector(".bag-btn");
+const btnonProdacts = document.querySelector(".bag-btn");
 //open and close nav bar tablet
 // ##################################################
 
@@ -49,9 +49,9 @@ class getAllProdacts {
     }
   }
 }
-
+//display my prodacts
 class displayProdacts {
-  //display my prodacts
+  //show products on dom
 ui(prodacts){
   let result=``;
   let newresult=``;
@@ -104,9 +104,14 @@ nprodact.forEach(nprodacts=>{
 productsDom.innerHTML=result
 nproductsDom.innerHTML = newresult;
 }
+
+//get btns on cart to work 
+getbagButtons(){
+
+}
    
 }
-
+//store prodacts to local storge
 class storgeProdacts {
   static saveProdacts(prodacts){
     localStorage.setItem('prodacts',JSON.stringify(prodacts))
@@ -121,6 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
   myprodacts.getProdact().then(prodacts=>{
     showprodacts.ui(prodacts)
     storgeProdacts.saveProdacts(prodacts)
+  }).then(()=>{
+    showprodacts.getbagButtons();
   });
 });
 // cart -end
