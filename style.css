@@ -725,8 +725,9 @@ footer .copy-right {
   background-position: 55%;
 }
 #feature .fe-box {
-    margin: 15px 0px;
+    margin: 8px 8px;
 }
+
 .section-p1 {
     padding: 10px 0px;
 }
@@ -752,6 +753,7 @@ footer .col {
   width: 100%;
   align-items: center;
 }
+
 }
 
 
